@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Hafıza Oyunu</string>
+
+    <string-array name="kart_temalari">
+        <item>Bayraklar</item>
+        <item>Çiçekler</item>
+        <item>Hayvanlar</item>
+        <item>Meyveler</item>
+    </string-array>
+</resources>

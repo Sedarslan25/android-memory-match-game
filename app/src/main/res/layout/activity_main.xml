@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A237E"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/gameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Hafıza Oyunu"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gameSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Hadi ! Oyuna Başlayalım !"
+        android:textColor="#C5CAE9"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameTitle" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_top_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameSubtitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oyuncu Adı"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_background"
+                android:hint="Kullanıcı adınızı girin"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#9E9E9E" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Zorluk Seviyesi"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/difficultyRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/kolayRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_selector_blue"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="4x4\nKolay"
+                    android:textAlignment="center"
+                    android:textColor="@color/radio_text_color_blue" />
+
+                <RadioButton
+                    android:id="@+id/ortaRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_selector_blue"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="6x6\nOrta"
+                    android:textAlignment="center"
+                    android:textColor="@color/radio_text_color_blue" />
+
+                <RadioButton
+                    android:id="@+id/zorRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_selector_blue"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="8x8\nZor"
+                    android:textAlignment="center"
+                    android:textColor="@color/radio_text_color_blue" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Tema Seç"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/temaRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/hayvanlarRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/radio_selector_green"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="Hayvanlar"
+                    android:textColor="@color/radio_text_color_green" />
+
+                <RadioButton
+                    android:id="@+id/meyvelerRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/radio_selector_red"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="Meyveler"
+                    android:textColor="@color/radio_text_color_red" />
+
+                <RadioButton
+                    android:id="@+id/bayrakRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/radio_selector_yellow"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="Bayraklar"
+                    android:textColor="@color/radio_text_color_yellow" />
+
+                <RadioButton
+                    android:id="@+id/ciceklerRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_selector_purple"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="Çiçekler"
+                    android:textColor="@color/radio_text_color_purple" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/startGameBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/button_background_purple"
+                android:text="Oyuna Başla"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:backgroundTint="#673AB7" />
+
+            <Button
+                android:id="@+id/skorTablosuBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_background_purple"
+                android:text="Skor Tablosu"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:backgroundTint="@color/colorPrimary" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

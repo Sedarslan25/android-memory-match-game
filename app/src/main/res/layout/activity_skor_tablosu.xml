@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A237E"
+    tools:context=".SkorTablosuActivity">
+
+    <TextView
+        android:id="@+id/skor_tablosu_baslik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Skor Tablosu"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp" />
+
+    <ListView
+        android:id="@+id/skor_listesi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/skor_tablosu_baslik"
+        android:layout_above="@+id/anaMenuBtn"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_top_background"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        android:padding="24dp" />
+
+    <Button
+        android:id="@+id/anaMenuBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_background_purple"
+        android:text="Ana Menü"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@color/colorPrimary" />
+
+</RelativeLayout>
